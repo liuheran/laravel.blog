@@ -87,7 +87,7 @@
         <div class="row">
             <div id="contents" class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 {{--{!! nl2br(e($post->content_raw)) !!}--}}
-                <textarea id="content-raw" style="display: none"> {{$post->content_raw}}</textarea>
+                <textarea id="content-raw" style="display: none"></textarea>
             </div>
         </div>
     </div>
