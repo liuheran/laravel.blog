@@ -27,7 +27,7 @@ class PostFormFields
         'title' => '',
         'subtitle' => '',
         'page_image' => '',
-        'content_html' => '',
+        'content_raw' => '',
         'meta_description' => '',
         'is_draft' => "0",
         'publish_date' => '',

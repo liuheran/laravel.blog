@@ -113,6 +113,6 @@
     </script>
     <script src="/js/simplemde.min.js"></script>
     <script>
-        var simplemde = new SimpleMDE({ element: $("#content")[0] });
+        var simplemde = new SimpleMDE({ element: $("#content-raw")[0] });
     </script>
 @stop

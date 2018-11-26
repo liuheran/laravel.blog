@@ -1,22 +1,4 @@
-{{--<html>
-    <head>
-        <title>{{ $post->title }}</title>
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="container">
-            <h1>{{ $post->title }}</h1>
-            <h5>{{ $post->published_at }}</h5>
-            <hr>
-                {!! nl2br(e($post->content)) !!}
-            <hr>
-            <button class="btn btn-primary" onclick="history.go(-1)">
-                « Back
-            </button>
-        </div>
-    </body>
-</html>--}}
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -103,8 +85,9 @@
 <article>
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                {!! nl2br(e($post->content)) !!}
+            <div id="contents" class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                {{--{!! nl2br(e($post->content_raw)) !!}--}}
+                <textarea id="content-raw" style="display: none"> {{$post->content_raw}}</textarea>
             </div>
         </div>
     </div>
@@ -122,7 +105,12 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="/js/clean-blog.js"></script>
-
+<script src="/js/simplemde.min.js"></script>
+<script>
+    var text = {!! json_encode($post->content_raw) !!};
+    var simplemde = new SimpleMDE();
+    $("#contents").html(simplemde.markdown(text));
+</script>
 </body>
 
 </html>
