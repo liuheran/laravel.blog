@@ -1,5 +1,6 @@
 <?php
 return [
+    'site' => '求知驿站',
     'title' => '学无止境',
     'posts_per_page' => 10,
     'uploads' => [

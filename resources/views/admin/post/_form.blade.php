@@ -66,9 +66,9 @@
             </label>
             <div class="col-md-8">
                 <select name="category" id="categories" class="form-control">
-                    @foreach ($categories as $categoty)
-                        <option @if (in_array($categoty->name, $allcategories)) selected @endif value="{{ $categoty->id }}">
-                            {{ $categoty->name }}
+                    @foreach ($categories as $cat)
+                        <option @if ($category == $cat->id) selected @endif value="{{ $cat->id }}">
+                            {{ $cat->name }}
                         </option>
                     @endforeach
                 </select>

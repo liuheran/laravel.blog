@@ -26,6 +26,7 @@ class PostFormFields
     protected $fieldList = [
         'title' => '',
         'subtitle' => '',
+        'category' => '',
         'page_image' => '',
         'content_raw' => '',
         'meta_description' => '',
@@ -71,7 +72,7 @@ class PostFormFields
             $fields,
             ['allTags' => Tag::pluck('tag')->all()],
             ['categories' => Category::all()],
-            ['allcategories' => Category::pluck('name')->all()]
+            ['allcategories' => Category::pluck('id')->all()]
         );
     }
 
