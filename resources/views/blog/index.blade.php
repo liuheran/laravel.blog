@@ -9,7 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog</title>
+    <title>
+        {{ config('blog.site') }}-
+        @if (empty($id))
+            {{ config('blog.title') }}
+        @else
+            {{ $cat[$id] }}
+        @endif
+    </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.css" rel="stylesheet">
