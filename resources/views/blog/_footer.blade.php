@@ -45,7 +45,8 @@
                         </a>
                     </li>
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; Liu Heran Website 2014</p>
+                <p class="copyright text-muted">Copyright &copy; Liu Heran Website 2018</p>
+                <p class="copyright text-muted">冀ICP备18038836号</p>
             </div>
         </div>
     </div>
